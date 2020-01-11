@@ -47,7 +47,7 @@ For example,
 Defining temperature, pressure, volume parameters
 -------------------------------------------------------
 
-For each case ((T, P) or (T, V)), the temperature (in K), P (in bars) and V (in :math:`m^3`) needs to specified, even if one of these parameter is redundant. 
+For each case ((T, P) or (T, V)), the temperature (in K), P (in bars) and V (in :math:`m^3`) needs to specified, even if one of these parameter is redundant.
 
 ------
 Method
@@ -65,4 +65,4 @@ For this, there are two switch provided named ``method`` and ``switch``
 Trace
 -----
 
-By default the value of ``trace`` is set to `:math:`10^{-25}``.
+By default the value of ``trace`` is set to :math:`10^{-25}`.

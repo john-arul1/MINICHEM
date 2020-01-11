@@ -262,8 +262,7 @@ This module takes the output equilibrium mole number array as input and calculat
     :param stoichiometric_dict: dictionary containing the stoichiometric information for the all the chemical species.
     :param el_inventory: dictionary containing the information
      about the input inventory specified.
-
-    :returns:Prints the cover gas release fractions and writes the output in
+    :returns: Prints the cover gas release fractions and writes the output in
      the iom.txt, released_mole_el.txt, released_sp.txt
 
 ^^^^^^^^
@@ -283,9 +282,5 @@ This module plots the sankey charts using ``holoviews`` module.
     :param include_el: list of element for which sankey chart is drawn
     :param Min: min mole number species to be included in chart
     :param Max: max mole number species to be included in chart
-
-    :param opfilename: opfilename with
-    (allowed formats: ['html', 'json', 'auto', 'png', 'widgets', 'scrubber', '
-     'auto', None])
-
-    :returns:saves sankey chart
+    :param opfilename: opfilename
+    :returns: saves sankey chart
