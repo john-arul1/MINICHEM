@@ -37,8 +37,9 @@ mathjax_config = {
     "displayAlign": "center"
 }
 
-# numfig:
-numfig_number_figures = True
+numfig = True
+# numref = True
+# numfig_number_figures = True
 numfig_figure_caption_prefix = "Fig."
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

@@ -38,8 +38,8 @@
 <h1>Code structure<a class="headerlink" href="#code-structure" title="Permalink to this headline">¶</a></h1>
 <p>The MINICHEM is written in Python 3.7.1. However it is also tested with
 Python &gt;= 3.7.1. Main modules of the MINICHEM are given in the
-Fig. <a href=".html#code-structure"></a><code class="xref num docutils literal notranslate"><span class="pre">#code-structure</span></code>. Each of module is explained in the subsequent section.</p>
-<div class="align-center figure" id="id1">
+<a class="reference internal" href="#id1"><span class="std std-numref">Fig. 1</span></a>. Each of module is explained in the subsequent section.</p>
+<div class="figure align-center" id="id1">
 <img alt="_images/code_structure_low_res.png" src="_images/code_structure_low_res.png" />
 </div>
 <div class="section" id="modules">
@@ -297,21 +297,23 @@ dependent rows as well as the list of the dependent species.</p>
 <li><p><strong>b</strong> – inventory of the elements specified as input</p></li>
 <li><p><strong>sp_g</strong> – list of the gaseous species considered</p></li>
 <li><p><strong>INSERT</strong> – initial list of the condensed species, from which the iteration starts. This speeds up the convergence if the several equilibrium species are known before hand.</p></li>
-<li><p><strong>total_sp_c</strong> – list of the all condensed species</p></li>
+<li><p><strong>total_sp_c</strong> – list of the all condensed species
+considered for the equilibrium calculation</p></li>
+<li><p><strong>a</strong> – condensed part of the stoichiometric matrix</p></li>
+<li><p><strong>a_g</strong> – gaseous part of the stoichiometric matrix</p></li>
+<li><p><strong>trace</strong> – min. amount of the allowed mole number</p></li>
+<li><p><strong>dict_of_all_sp_grt</strong> – chemical potential dictionary of the all chemical species at the specified temperature.</p></li>
+<li><p><strong>initial_sp_c</strong> – initial list of the considered condensed chemical species</p></li>
+<li><p><strong>grt_dict</strong> – chemical potential dictionary of the all chemical specis at the specified temperature.</p></li>
+<li><p><strong>stoichiometric_dict</strong> – dictionary consisting the stoimetric data for the all the chemical species</p></li>
+<li><p><strong>temperature</strong> – specified temperature</p></li>
+<li><p><strong>v</strong> – system volume</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">y</span></code>, Equilibrium mole number species wise. <code class="docutils literal notranslate"><span class="pre">sp_g</span></code>, list of the gaseous phase species. <code class="docutils literal notranslate"><span class="pre">sp_c</span></code>, list of the condensed phase species.</p>
+</dd>
 </dl>
-<p>considered for the equilibrium calculation
-:param a: condensed part of the stoichiometric matrix
-:param a_g: gaseous part of the stoichiometric matrix
-:param trace: min. amount of the allowed mole number
-:param dict_of_all_sp_grt: chemical potential dictionary of the all chemical species at the specified temperature.
-:param initial_sp_c: initial list of the considered condensed chemical species
-:param grt_dict: chemical potential dictionary of the all chemical specis at the specified temperature.
-:param stoichiometric_dict: dictionary consisting the stoimetric data for the all the chemical species
-:param temperature: specified temperature
-:param v: system volume
-:returns: <code class="docutils literal notranslate"><span class="pre">y</span></code>, Equilibrium mole number species wise. <code class="docutils literal notranslate"><span class="pre">sp_g</span></code>, list of the gaseous phase species. <code class="docutils literal notranslate"><span class="pre">sp_c</span></code>, list of the condensed phase species.</p>
 </dd></dl>
 
 <dl class="function">
@@ -371,12 +373,15 @@ release fraction in the cover gas.</p>
 <li><p><strong>species</strong> – list of the species considered</p></li>
 <li><p><strong>input1</strong> – list of the element initially considered.</p></li>
 <li><p><strong>stoichiometric_dict</strong> – dictionary containing the stoichiometric information for the all the chemical species.</p></li>
-<li><p><strong>el_inventory</strong> – dictionary containing the information</p></li>
+<li><p><strong>el_inventory</strong> – dictionary containing the information
+about the input inventory specified.</p></li>
 </ul>
 </dd>
 </dl>
-<p>about the input inventory specified.
-:returns:Prints the cover gas release fractions and writes the output in the iom.txt, released_mole_el.txt, released_sp.txt</p>
+<dl class="simple">
+<dt>:returns:Prints the cover gas release fractions and writes the output in</dt><dd><p>the iom.txt, released_mole_el.txt, released_sp.txt</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -396,15 +401,16 @@ release fraction in the cover gas.</p>
 <li><p><strong>input1</strong> – list of input elements</p></li>
 <li><p><strong>include_el</strong> – list of element for which sankey chart is drawn</p></li>
 <li><p><strong>Min</strong> – min mole number species to be included in chart</p></li>
-<li><p><strong>Max</strong> – max mole number species to be included in the chart</p></li>
-<li><p><strong>opfilename</strong> – opfilename with extension</p></li>
+<li><p><strong>Max</strong> – max mole number species to be included in chart</p></li>
+<li><p><strong>opfilename</strong> – opfilename with</p></li>
 </ul>
 </dd>
 </dl>
-<p>(allowed formats: [‘html’, ‘json’, ‘auto’, ‘png’, ‘widgets’, ‘scrubber’, ‘auto’, None])
-returns:
-:return:saves sankey chart
-“””</p>
+<dl class="simple">
+<dt>(allowed formats: [‘html’, ‘json’, ‘auto’, ‘png’, ‘widgets’, ‘scrubber’, ‘</dt><dd><p>‘auto’, None])</p>
+</dd>
+</dl>
+<p>:returns:saves sankey chart</p>
 </dd></dl>
 
 </div>
@@ -431,10 +437,10 @@ returns:
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Requirements.html">Requirements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="theory.html">Theory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="theory.html#references">References</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Code structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running.html">Running the code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extending_database.html">Extending database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending_database.html#references">References</a></li>
 </ul>
 
 <div class="relations">

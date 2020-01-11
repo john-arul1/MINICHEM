@@ -3,14 +3,14 @@ Code structure
 ==============
 The MINICHEM is written in Python 3.7.1. However it is also tested with
 Python >= 3.7.1. Main modules of the MINICHEM are given in the
-Fig. :num:`#code-structure`. Each of module is explained in the subsequent section.
+:numref:`code-structure`. Each of module is explained in the subsequent section.
 
 
 .. _code-structure:
 
 .. figure:: ../_images/code_structure_low_res.png
    :align: center
-   :figclass: align-center
+
 
 -------
 Modules
@@ -35,7 +35,7 @@ This module reads extrapolated thermochemical databases in ``thermochemical_data
 .. function:: HRT(a1, a2, a3, a4, a5, a6, a7, b1, b2, t):
 
     Finds the value of :math:`\frac{H}{RT}`
-    
+
     :param a1:  :math:`C_p` coefficient
     :param a2:  :math:`C_p` coefficient
     :param a3:  :math:`C_p` coefficient
@@ -94,7 +94,7 @@ This module reads extrapolated thermochemical databases in ``thermochemical_data
 .. function:: calculate_grt(grt_dict, input_temp, thermo_dict):
 
     The function calculates the chemical potential using ``thermo_dict`` at specified input temperature and returns in the form of dictionary.
-    
+
     :param grt_dict: Dictionary to store the thermochemical potentials at specified temperature
     :param input_temp: input temperature at which the chemical potential to be calculated.
     :param thermo_dict: dictionary containing NASA 9 polynomial thermochemical
@@ -126,9 +126,9 @@ In order to calculate the chemical equilibrium using the given input chemical el
     :param species: List of species for which combination search will be taken out
     :param grt_dict: Dictionary of the chemical potentials
     :param combination_sp: list of combination of species
-    :returns: ``combination_sp``, list of species containing combination of species list. 
+    :returns: ``combination_sp``, list of species containing combination of species list.
     :Example:
-    
+
         If species is H2O,
         Then the combinations in ``grt_dict`` might be: OH, H2O2, H, O2 etc.
 
@@ -200,13 +200,13 @@ This module contains necessary functions to calculate the thermochemical equilib
                           temperature, v=0, pressure=1):
 
     Determines the equilibrium species in from given input elment/species list. The function contain ``sd_tv`` and ``sd_tp`` sub-functions, which basically calculates the equilibrium species for the (T, V) and (T, P) cases respectively.
-    
+
     :param input1: list of the element in the inventory
     :param b: inventory of the elements specified as input
     :param sp_g: list of the gaseous species considered
     :param INSERT: initial list of the condensed species, from which the iteration starts. This speeds up the convergence if the several equilibrium species are known before hand.
-    :param total_sp_c: list of the all condensed species 
-    considered for the equilibrium calculation
+    :param total_sp_c: list of the all condensed species
+     considered for the equilibrium calculation
     :param a: condensed part of the stoichiometric matrix
     :param a_g: gaseous part of the stoichiometric matrix
     :param trace: min. amount of the allowed mole number
@@ -260,9 +260,11 @@ This module takes the output equilibrium mole number array as input and calculat
     :param species: list of the species considered
     :param input1: list of the element initially considered.
     :param stoichiometric_dict: dictionary containing the stoichiometric information for the all the chemical species.
-    :param el_inventory: dictionary containing the information 
-    about the input inventory specified.
-    :returns:Prints the cover gas release fractions and writes the output in the iom.txt, released_mole_el.txt, released_sp.txt
+    :param el_inventory: dictionary containing the information
+     about the input inventory specified.
+
+    :returns:Prints the cover gas release fractions and writes the output in
+     the iom.txt, released_mole_el.txt, released_sp.txt
 
 ^^^^^^^^
 Plotting
@@ -270,7 +272,7 @@ Plotting
 
 ``Filename: plot_hv.py``
 
-This module plots the sankey charts using ``holoviews`` module. 
+This module plots the sankey charts using ``holoviews`` module.
 
 .. function:: plot_hv(input1, stoichiometric_dict, include_el, opfilename,
                       Min=0, Max=1e9):
@@ -280,9 +282,10 @@ This module plots the sankey charts using ``holoviews`` module.
     :param input1: list of input elements
     :param include_el: list of element for which sankey chart is drawn
     :param Min: min mole number species to be included in chart
-    :param Max: max mole number species to be included in the chart
-    :param opfilename: opfilename with extension 
-    (allowed formats: ['html', 'json', 'auto', 'png', 'widgets', 'scrubber', 'auto', None]) 
-    returns:
-    :return:saves sankey chart
-    """
+    :param Max: max mole number species to be included in chart
+
+    :param opfilename: opfilename with
+    (allowed formats: ['html', 'json', 'auto', 'png', 'widgets', 'scrubber', '
+     'auto', None])
+
+    :returns:saves sankey chart
