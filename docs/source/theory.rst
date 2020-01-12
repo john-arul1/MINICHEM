@@ -10,9 +10,9 @@ since temperature and pressure are independent variables of Gibbs function
 [Kenneth1956]_ . If the system is defined in terms of
 temperature and volume, then minimisation of Helmholtz function is appropriate.
 
-For a multi-phase system with :math:`\mathrm{(x_1, x_2,\ldots, x_{N_g},\ldots 
-x_{N_g + N_s})}` moles of :math:`\mathrm{(N_g + N_s)}` species containing 
-:math:`\mathrm{N_e}` elements, the Helmholtz function to be minimized is as 
+For a multi-phase system with :math:`\mathrm{(x_1, x_2,\ldots, x_{N_g},\ldots
+x_{N_g + N_s})}` moles of :math:`\mathrm{(N_g + N_s)}` species containing
+:math:`\mathrm{N_e}` elements, the Helmholtz function to be minimized is as
 follows:
 
 .. math::
@@ -33,7 +33,7 @@ bars. Dividing Eq. :eq:`gibbs_cost_function` by RT, we get,
     = \underbrace{\sum_{i = 1}^{\mathrm{N_s + N_g}}\tilde{\mu}_i x_i -
     \bar{x}^g}_{\mathrm{F(x)}}
 
-Where :math:`\bar{x}^g` is the total number of moles of gas in the system. 
+Where :math:`\bar{x}^g` is the total number of moles of gas in the system.
 :math:`\tilde{\mu}_i` is the reduced (dimension less) chemical
 potential and can be given in terms of their standard chemical potential
 functions as,
@@ -50,12 +50,12 @@ functions as,
     \end{cases}
 
 
-The superscript **g** and **c** are used for gaseous and condensed phase 
-species. For example, :math:`x_{i}^{g}` is the number of moles for 
-:math:`i^{th}` chemical species in gas phase. 
-:math:`{\left(\tilde{\mu}^o\right)}_{i}^{g}` is chemical potential 
-of :math:`i^{th}` gaseous chemical species in gas phase at standard 
-conditions. :math:`\mathrm{N_s}` is the total number of the condensed species, 
+The superscript **g** and **c** are used for gaseous and condensed phase
+species. For example, :math:`x_{i}^{g}` is the number of moles for
+:math:`i^{th}` chemical species in gas phase.
+:math:`{\left(\tilde{\mu}^o\right)}_{i}^{g}` is chemical potential
+of :math:`i^{th}` gaseous chemical species in gas phase at standard
+conditions. :math:`\mathrm{N_s}` is the total number of the condensed species,
 :math:`\mathrm{N_g}` is the total number of the species in the gaseous phase.
 
 While the free energy Eq. :eq:`Atilde` is minimized to solve for
@@ -88,8 +88,8 @@ To minimise the free energy (Eq. :eq:`Atilde`) of the system
 containing :math:`\mathrm{(x_1, x_2,\ldots x_{N_g},
 \ldots,x_{N_g + N_s})}` moles of :math:`\mathrm{N_g}\) + \(\mathrm{N_s}` species, with
 constraints described in Eq. :eq:`constraint_equation`, the method of
-Lagrange :math:`'` s underdetermined multipliers is used. Here, the formulation 
-is given for constant temperature and constant volume problem. Formulation for 
+Lagrange :math:`'` s underdetermined multipliers is used. Here, the formulation
+is given for constant temperature and constant volume problem. Formulation for
 constant pressure and constant temperature can be found in literature.
 The Lagrangian function to be minimized can be written as,
 
@@ -109,7 +109,7 @@ part as,
     \frac{\partial L}{\partial x_i} = \mathrm{\frac{\partial L^g}
     {\partial x_i} +\frac{\partial L^c}{\partial x_i}}
 
-Where, the :math:`\mathrm{\frac{\partial L^g}{\partial x_i}}` and 
+Where, the :math:`\mathrm{\frac{\partial L^g}{\partial x_i}}` and
 :math:`\mathrm{\frac{\partial L^c}{\partial x_i}}` are given by,
 
 
@@ -161,7 +161,7 @@ iteration can be obtained from the rearranged Eq. :eq:`taylor_expansion`
 
 .. math::
     :label: improved_x
-    
+
     x_i^g = -f_i y_i^g + y_i^g
     \left(\sum_{i=1}^{\mathrm{N_g}} \pi _{j} a_{ij}^{g} + 1\right)
 
@@ -174,7 +174,7 @@ Substituting Eq. :eq:`improved_x` in Eq. :eq:`constraint_equation` we have,
     \sum_{k=1}^{\mathrm{N_e}} r_{jk} \pi_k
     + \sum_{i=1}^{\mathrm{N_s}} a_{ij}^{c}x_{i}^{c} & = b_j
     + \sum_{i=1}^{\mathrm{N_g}} a_{ij}^{g} f_i y_i^g
-    - \sum_{i=1}^{\mathrm{N_g}}a_{ij}^{g}y_i^g      &&j= 1,2\ldots, \mathrm{N_e} 
+    - \sum_{i=1}^{\mathrm{N_g}}a_{ij}^{g}y_i^g      &&j= 1,2\ldots, \mathrm{N_e}
     \end{align}
 
 Where,
@@ -188,12 +188,12 @@ Where,
     \end{align}
 
 The Eqs. :eq:`solid_langrage_multiplier` and :eq:`r_matrix_equation` are
-solved simultaneously to get :math:`\pi _j` and :math:x_i^c. Using 
+solved simultaneously to get :math:`\pi _j` and :math:x_i^c. Using
 :math:`\pi _j`, updated values of :math:`x^g` are obtained
-using Eq. :eq:`improved_x`. Here, it should be noted that the formulation of 
-condensed species is such that, the moles of each condensed phase species is 
-directly obtained from the solution of Eq. :eq:`solid_langrage_multiplier` and 
-:eq:`r_matrix_equation`, without applying any correction. 
+using Eq. :eq:`improved_x`. Here, it should be noted that the formulation of
+condensed species is such that, the moles of each condensed phase species is
+directly obtained from the solution of Eq. :eq:`solid_langrage_multiplier` and
+:eq:`r_matrix_equation`, without applying any correction.
 If all :math:`x^g` values are positive, they are considered as the guessed value for the next iteration. If not, then guessed values are corrected with the following Eq.\ as,
 
 .. math::
@@ -209,7 +209,7 @@ to \citet{gunnar_eriksson_thermodynamic_1971},
 
 .. math::
     :label: lambda
-    
+
     \lambda = 0.99 \lambda ' (1 - 0.5 \lambda ')
 
 Where, :math:`\lambda '` is the value required for the next step to
@@ -221,11 +221,11 @@ remain positive as given by,
     \lambda ' = \min_{i}\left(\frac{y^{g,c}_{i} }{(y^{g,c}_{i} - x^{g,c}_{i})}
     \right)
 
-The corrected values of :math:`y^g` are considered for the next 
-iteration. Since, in the above formulation, the set of condensed species is 
-not known beforehand, for the first iteration, only gaseous species 
-equilibrium is obtained. In subsequent iterations, species are added such that 
-they reduce overall system :math:`'` s free energy. This can be assured by 
+The corrected values of :math:`y^g` are considered for the next
+iteration. Since, in the above formulation, the set of condensed species is
+not known beforehand, for the first iteration, only gaseous species
+equilibrium is obtained. In subsequent iterations, species are added such that
+they reduce overall system :math:`'` s free energy. This can be assured by
 
 
 .. math::
@@ -240,24 +240,24 @@ with the help of reduced row echelon form. Subsequently, dependent species, as
 well as the matching combination of dependent species present in species set,
 are removed temporarily, and only species which decrease overall free energy
 of the system is included in species set. For example, species set containing,
-U (L), :math:`\mathrm{UO_{2}(L)}` and :math:`\mathrm{U_4O_9(III)}`, 
-leads to linear dependence and all three species are removed, and species 
+U (L), :math:`\mathrm{UO_{2}(L)}` and :math:`\mathrm{U_4O_9(III)}`,
+leads to linear dependence and all three species are removed, and species
 which lower free energy of the system are included in species set.
 
 The above Helmholtz function minimization subjected to mole number
 conservation constraint is implemented in python and the code is hereafter
 referred to as **MINICHEM** (MINImisation of CHEMical potentials). Once the equilibrium species moles in various
-phases are determined, the release fraction of 
+phases are determined, the release fraction of
 the :math:`\mathrm{j^{th}}` chemical species are determined as follows:
 
 .. math::
 
-    \begin{align}
-    \text{Elemental release fraction = }\mathrm{{RF(e)}_j} &=
+    \begin{gather}
+    \text{Elemental release fraction = }\mathrm{{RF(e)}_j} =
     \frac{{\sum\limits}_{i} \text{Number of moles of
     \(j^{th}\) element in \(i^{th}\) gaseous species}}{\text{Total mole
     inventory of \(j^{th}\) element}}
-    \end{align}
+    \end{gather}
 
 The isotopic release fraction is defined as,
 
