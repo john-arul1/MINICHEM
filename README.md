@@ -4,7 +4,7 @@ The MINICHEM (MINImisation of CHEMical potentials) is a code to calculate
 the In-vessel source term using thermochemical equilibrium approach. The code
 calculates the equilibrium species in the reactor vessel during ULOFA. The
 released inventory in the cover gas is expressed in terms of release fraction.
-The code is capable to calculate the equilibrium species at both (T, P) and 
+The code is capable to calculate the equilibrium species at both (T, P) and
 (T, V) case.
 Apart from source term calculations, the code can be used for the
 general purpose chemical equilibrium calculations. The
@@ -14,7 +14,7 @@ project started under the Reactor Shielding and Data Division (RSDD) at IGCAR.
 ## Documentation
 
 Complete documentation on the usage of MINICHEM is hosted on
-[Read the Docs]().
+[Read the Docs](https://minichem.readthedocs.io/en/latest/).
 
 
 ## Citing
