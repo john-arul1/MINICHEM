@@ -6,20 +6,19 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 MINICHEM (MINImisation of CHEMical potentials)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The MINICHEM is a code to determine the mole quantity released in the cover 
-gas, which is primarily the instantaneous in-containment source. Although, the 
-present code only depicts the chemical aspects of the release behaviour of RN, 
-which we consider it as a first step towards mechanistic model development for 
-oxide fuelled SFRs. For the purpose of this analysis, ULOF event resulting in 
-whole core melt is considered. 
-The in-vessel source term is determined using chemical equilibrium approach 
-with no mixture assumption. No mixture assumption essentially means that 
-during chemical equilibrium, the mixing properties of the species are not 
-considered; The estimated equilibrium species mole numbers corresponds to 
-the vapour pressure of the species at specified temperature. This assumption 
-usually leads to conservative estimates. With the help of this equilibrium 
-species, distribution of RN in three phases (solid, gas and liquid) can be 
-determined; From this information, release fractions of RNs to the cover gas 
+The MINICHEM (MINImisation of CHEMical potentials) is a code to calculate the In-vessel source term using thermochemical equilibrium approach. The code calculates the equilibrium species in the reactor vessel during ULOFA. The released inventory in the cover gas is expressed in terms of release fraction. Although, the
+present code only depicts the chemical aspects of the release behaviour of RN,
+which we consider it as a first step towards mechanistic model development for
+oxide fuelled SFRs. For the purpose of this analysis, ULOF event resulting in
+whole core melt is considered.
+The in-vessel source term is determined using chemical equilibrium approach
+with no mixture assumption. No mixture assumption essentially means that
+during chemical equilibrium, the mixing properties of the species are not
+considered; The estimated equilibrium species mole numbers corresponds to
+the vapour pressure of the species at specified temperature. This assumption
+usually leads to conservative estimates. With the help of this equilibrium
+species, distribution of RN in three phases (solid, gas and liquid) can be
+determined; From this information, release fractions of RNs to the cover gas
 are evaluated. The code is capable to calculate the equilibrium species at both (T, P) and (T, V) case.
 
 Apart from source term calculations, the code can be used for the
