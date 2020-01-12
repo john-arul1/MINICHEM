@@ -16,7 +16,8 @@
 # import Sphinx
 
 # -- Project information -----------------------------------------------------
-
+# The master toctree document.
+master_doc = 'index'
 project = 'MINICHEM'
 copyright = '2020, Parthkumar Patel, A. John Arul'
 author = 'Parthkumar Patel, A. John Arul'
