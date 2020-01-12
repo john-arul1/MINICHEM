@@ -19,7 +19,7 @@ Complete documentation on the usage of MINICHEM is hosted on
 
 ## Citing
 
-If you use OpenMC in your research, please consider giving proper attribution by
+If you use MINICHEM in your research, please consider giving proper attribution by
 citing the following publication:
 
 
@@ -33,4 +33,3 @@ the authors (Email: parthpdpu@gmail.com, arul@igcar.gov.in).
 ## License
 
 MINICHEM is distributed under
-the [MIT/X](http://openmc.readthedocs.io/en/stable/license.html)
