@@ -58,8 +58,8 @@ MINICHEM can calculate (T, P) or (T, V) chemical equilibrium using two method:
 2. Sequential Quadratic Programming
 
 For this, there are two switch provided named ``method`` and ``switch``
-- The valid value for the ``method`` is `SLSQP`or `MINI` (which calculates chemical equilibrium using `Quadratic gradient descent minimising method`)
-- The valid value for the ``switch`` is `TP`or `TV`.
+- The valid value for the ``method`` is ``SLSQP``or ``MINI`` (which calculates chemical equilibrium using `Quadratic gradient descent minimising method`)
+- The valid value for the ``switch`` is ``TP``or ``TV``.
 
 -----
 Trace
