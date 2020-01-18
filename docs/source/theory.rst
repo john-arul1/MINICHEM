@@ -252,12 +252,12 @@ the :math:`\mathrm{j^{th}}` chemical species are determined as follows:
 
 .. math::
 
-    \begin{gather}
+    \begin{aligned}
     \text{Elemental release fraction = }\mathrm{{RF(e)}_j} =
     \frac{{\sum\limits}_{i} \text{Number of moles of
     \(j^{th}\) element in \(i^{th}\) gaseous species}}{\text{Total mole
     inventory of \(j^{th}\) element}}
-    \end{gather}
+    \end{aligned}
 
 The isotopic release fraction is defined as,
 
