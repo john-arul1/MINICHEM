@@ -188,7 +188,7 @@ Where,
     \end{align}
 
 The Eqs. :eq:`solid_langrage_multiplier` and :eq:`r_matrix_equation` are
-solved simultaneously to get :math:`\pi _j` and :math:x_i^c. Using
+solved simultaneously to get :math:`\pi _j` and :math:`x_i^c`. Using
 :math:`\pi _j`, updated values of :math:`x^g` are obtained
 using Eq. :eq:`improved_x`. Here, it should be noted that the formulation of
 condensed species is such that, the moles of each condensed phase species is
