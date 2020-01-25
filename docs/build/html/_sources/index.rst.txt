@@ -23,7 +23,7 @@ are evaluated. The code is capable to calculate the equilibrium species at both 
 
 Apart from source term calculations, the code can be used for the
 general purpose chemical equilibrium calculations. The
-code is developed at the Reactor Shielding and Data Division (RSDD) at `Indira Gandhi Center for Atomic Research, India <http://www.igcar.gov.in/>`_.
+code is developed at the Reactor Shielding and Data Division (RSDD) at `Indira Gandhi Center for Atomic Research, India <http://www.igcar.gov.in/>`_. The source code is hosted on `GitHub <https://github.com/geekonloose/MINICHEM>`_.
 
 .. admonition:: Recommended publication for citing
    :class: tip
