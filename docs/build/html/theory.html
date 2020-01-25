@@ -223,9 +223,9 @@ Quadratic gradient descent method (2) sequential least square minimisation
 containing <span class="math notranslate nohighlight">\(\mathrm{(x_1, x_2,\ldots x_{N_g},
 \ldots,x_{N_g + N_s})}\)</span> moles of <span class="math notranslate nohighlight">\(\mathrm{N_g}\) + \(\mathrm{N_s}\)</span> species, with
 constraints described in Eq. <a class="reference internal" href="#equation-constraint-equation">(4)</a>, the method of
-Lagrange <span class="math notranslate nohighlight">\('\)</span> s underdetermined multipliers is used. Here, the formulation
+Lagrange <span class="math notranslate nohighlight">\('\)</span> s underdetermined multipliers <a class="reference internal" href="extending_database.html#bertsekas2014" id="id2"><span>[Bertsekas2014]</span></a> <a class="reference internal" href="extending_database.html#weisstein2020" id="id3"><span>[Weisstein2020]</span></a> is used. Here, the formulation
 is given for constant temperature and constant volume problem. Formulation for
-constant pressure and constant temperature can be found in literature.
+constant pressure and constant temperature can be found in literature <a class="reference internal" href="extending_database.html#white1958" id="id4"><span>[White1958]</span></a> <a class="reference internal" href="extending_database.html#mcbride-and-gordon1996a" id="id5"><span>[McBride_and_Gordon1996a]</span></a> <a class="reference internal" href="extending_database.html#eriksson1979" id="id6"><span>[Eriksson1979]</span></a> <a class="reference internal" href="extending_database.html#eriksson-and-hack1990" id="id7"><span>[Eriksson_and_Hack1990]</span></a>.
 The Lagrangian function to be minimized can be written as,</p>
 <div class="math notranslate nohighlight" id="equation-eq-to-mini">
 <span class="eqno">(5)<a class="headerlink" href="#equation-eq-to-mini" title="Permalink to this equation">¶</a></span>\[\mathrm{L} = \mathrm{\tilde{A}} - \sum_{j=1}^{N_e}\pi_j C_j(x)\]</div>
@@ -282,19 +282,19 @@ r_{jk} &amp; = r_{kj} = \sum_{i=1}^{\mathrm{N_g}}
 (a_{ij}^{g}a_{ik}^{g})y_{i}^{g} \text{          }j = 1, 2\ldots, \mathrm{N_e}
 \end{align}\]</div>
 <p>The Eqs. <a class="reference internal" href="#equation-solid-langrage-multiplier">(8)</a> and <a class="reference internal" href="#equation-r-matrix-equation">(13)</a> are
-solved simultaneously to get <span class="math notranslate nohighlight">\(\pi _j\)</span> and :math:x_i^c. Using
+solved simultaneously to get <span class="math notranslate nohighlight">\(\pi _j\)</span> and <span class="math notranslate nohighlight">\(x_i^c\)</span>. Using
 <span class="math notranslate nohighlight">\(\pi _j\)</span>, updated values of <span class="math notranslate nohighlight">\(x^g\)</span> are obtained
 using Eq. <a class="reference internal" href="#equation-improved-x">(12)</a>. Here, it should be noted that the formulation of
 condensed species is such that, the moles of each condensed phase species is
 directly obtained from the solution of Eq. <a class="reference internal" href="#equation-solid-langrage-multiplier">(8)</a> and
 <a class="reference internal" href="#equation-r-matrix-equation">(13)</a>, without applying any correction.
-If all <span class="math notranslate nohighlight">\(x^g\)</span> values are positive, they are considered as the guessed value for the next iteration. If not, then guessed values are corrected with the following Eq.as,</p>
+If all <span class="math notranslate nohighlight">\(x^g\)</span> values are positive, they are considered as the guessed value for the next iteration. If not, then guessed values are corrected with the following Eq.as <a class="reference internal" href="extending_database.html#gunnar-eriksson1971" id="id8"><span>[Gunnar_Eriksson1971]</span></a>,</p>
 <div class="math notranslate nohighlight" id="equation-y-i-improved">
 <span class="eqno">(15)<a class="headerlink" href="#equation-y-i-improved" title="Permalink to this equation">¶</a></span>\[y_{i, improved}^{p} = y^{p}_{i} + \lambda (x^{p}_{i} - y^{p}_{i})\]</div>
 <p>Where, p is the phase of chemical species (gaseous
 species <strong>g</strong> or condensed species <strong>c</strong>). The <span class="math notranslate nohighlight">\(\lambda\)</span> is
 the correction factor, and can be given according
-to citet{gunnar_eriksson_thermodynamic_1971},</p>
+to <a class="reference internal" href="extending_database.html#gunnar-eriksson1971" id="id9"><span>[Gunnar_Eriksson1971]</span></a>,</p>
 <div class="math notranslate nohighlight" id="equation-lambda">
 <span class="eqno">(16)<a class="headerlink" href="#equation-lambda" title="Permalink to this equation">¶</a></span>\[\lambda = 0.99 \lambda ' (1 - 0.5 \lambda ')\]</div>
 <p>Where, <span class="math notranslate nohighlight">\(\lambda '\)</span> is the value required for the next step to
@@ -306,7 +306,7 @@ remain positive as given by,</p>
 iteration. Since, in the above formulation, the set of condensed species is
 not known beforehand, for the first iteration, only gaseous species
 equilibrium is obtained. In subsequent iterations, species are added such that
-they reduce overall system <span class="math notranslate nohighlight">\('\)</span> s free energy. This can be assured by</p>
+they reduce overall system <span class="math notranslate nohighlight">\('\)</span> s free energy. This can be assured by <a class="reference internal" href="extending_database.html#mcbride-and-gordon1996a" id="id10"><span>[McBride_and_Gordon1996a]</span></a> <a class="reference internal" href="extending_database.html#gunnar-eriksson1971" id="id11"><span>[Gunnar_Eriksson1971]</span></a>,</p>
 <div class="math notranslate nohighlight" id="equation-test-for-condesed-sp">
 <span class="eqno">(18)<a class="headerlink" href="#equation-test-for-condesed-sp" title="Permalink to this equation">¶</a></span>\[{\left(\tilde{\mu}^o\right)}_i^c -
 \sum_{j=1}^{\mathrm{N_e}}\pi_{j}b_{j} \le 0\]</div>
@@ -325,12 +325,12 @@ referred to as <strong>MINICHEM</strong> (MINImisation of CHEMical potentials). 
 phases are determined, the release fraction of
 the <span class="math notranslate nohighlight">\(\mathrm{j^{th}}\)</span> chemical species are determined as follows:</p>
 <div class="math notranslate nohighlight">
-\[\begin{gather}
+\[\begin{aligned}
 \text{Elemental release fraction = }\mathrm{{RF(e)}_j} =
 \frac{{\sum\limits}_{i} \text{Number of moles of
 \(j^{th}\) element in \(i^{th}\) gaseous species}}{\text{Total mole
 inventory of \(j^{th}\) element}}
-\end{gather}\]</div>
+\end{aligned}\]</div>
 <p>The isotopic release fraction is defined as,</p>
 <div class="math notranslate nohighlight">
 \[\text{Isotopic release fraction }{RF(iso)}_k = {\mathrm{RF(e)}_j} \times

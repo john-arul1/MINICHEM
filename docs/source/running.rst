@@ -13,28 +13,27 @@ Before running the code, please check :ref:`Requirements`, for the necessary pyt
 - species_search.py
 - stoichiometric_coeff_matrix_generator.py
 
-MINICHEM uses following input files.
+MINICHEM uses following input file.
 
-**Input files:**
+**Input file:**
 
 - thermo_chemical_database.txt
-- thermo_python.in
+
 
 The code generates following output files.
 
 **Output files:**
 
-- iom.txt: Gives the released mole, RF, and details about considered species
-            and released species.
+- iom.txt: Gives the released mole, RF, and details about considered and released species.
 - released_sp.txt: Gives the released species mole
-- released_mole_el.txt: el wise result of the released mole.
+- released_mole_el.txt: element wise result of the released mole.
 
 
 ------------------------
 Defining input inventory
 ------------------------
 
-The input inventory can be specified by modifying the input1 list. Each list input element will be string starting with the mole number followed by the element name.
+The input inventory can be specified by modifying the input1 list in ``minichemp.py``. Each list input element should be specified as string starting with its the mole number followed by the element name.
 
 For example,
 

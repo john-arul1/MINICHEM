@@ -88,9 +88,9 @@ To minimise the free energy (Eq. :eq:`Atilde`) of the system
 containing :math:`\mathrm{(x_1, x_2,\ldots x_{N_g},
 \ldots,x_{N_g + N_s})}` moles of :math:`\mathrm{N_g}\) + \(\mathrm{N_s}` species, with
 constraints described in Eq. :eq:`constraint_equation`, the method of
-Lagrange :math:`'` s underdetermined multipliers is used. Here, the formulation
+Lagrange :math:`'` s underdetermined multipliers [Bertsekas2014]_ [Weisstein2020]_ is used. Here, the formulation
 is given for constant temperature and constant volume problem. Formulation for
-constant pressure and constant temperature can be found in literature.
+constant pressure and constant temperature can be found in literature [White1958]_ [McBride_and_Gordon1996a]_ [Eriksson1979]_ [Eriksson_and_Hack1990]_.
 The Lagrangian function to be minimized can be written as,
 
 .. math::
@@ -194,7 +194,7 @@ using Eq. :eq:`improved_x`. Here, it should be noted that the formulation of
 condensed species is such that, the moles of each condensed phase species is
 directly obtained from the solution of Eq. :eq:`solid_langrage_multiplier` and
 :eq:`r_matrix_equation`, without applying any correction.
-If all :math:`x^g` values are positive, they are considered as the guessed value for the next iteration. If not, then guessed values are corrected with the following Eq.\ as,
+If all :math:`x^g` values are positive, they are considered as the guessed value for the next iteration. If not, then guessed values are corrected with the following Eq.\ as [Gunnar_Eriksson1971]_,
 
 .. math::
     :label: y_i_improved
@@ -205,7 +205,7 @@ If all :math:`x^g` values are positive, they are considered as the guessed value
 Where, p is the phase of chemical species (gaseous
 species **g** or condensed species **c**). The :math:`\lambda` is
 the correction factor, and can be given according
-to \citet{gunnar_eriksson_thermodynamic_1971},
+to [Gunnar_Eriksson1971]_,
 
 .. math::
     :label: lambda
@@ -225,7 +225,7 @@ The corrected values of :math:`y^g` are considered for the next
 iteration. Since, in the above formulation, the set of condensed species is
 not known beforehand, for the first iteration, only gaseous species
 equilibrium is obtained. In subsequent iterations, species are added such that
-they reduce overall system :math:`'` s free energy. This can be assured by
+they reduce overall system :math:`'` s free energy. This can be assured by [McBride_and_Gordon1996a]_ [Gunnar_Eriksson1971]_,
 
 
 .. math::

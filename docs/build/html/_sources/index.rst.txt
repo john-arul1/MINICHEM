@@ -45,3 +45,6 @@ code is developed at the Reactor Shielding and Data Division (RSDD) at `Indira G
     code_structure
     running
     extending_database
+
+.. meta::
+    :google-site-verification: AVg7xNWpclGRAt67p2S1ffN28JPdG0qDyMjl1BvhFLU

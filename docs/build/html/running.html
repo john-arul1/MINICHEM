@@ -174,26 +174,21 @@
 <li><p>species_search.py</p></li>
 <li><p>stoichiometric_coeff_matrix_generator.py</p></li>
 </ul>
-<p>MINICHEM uses following input files.</p>
-<p><strong>Input files:</strong></p>
+<p>MINICHEM uses following input file.</p>
+<p><strong>Input file:</strong></p>
 <ul class="simple">
 <li><p>thermo_chemical_database.txt</p></li>
-<li><p>thermo_python.in</p></li>
 </ul>
 <p>The code generates following output files.</p>
 <p><strong>Output files:</strong></p>
 <ul class="simple">
-<li><dl class="simple">
-<dt>iom.txt: Gives the released mole, RF, and details about considered species</dt><dd><p>and released species.</p>
-</dd>
-</dl>
-</li>
+<li><p>iom.txt: Gives the released mole, RF, and details about considered and released species.</p></li>
 <li><p>released_sp.txt: Gives the released species mole</p></li>
-<li><p>released_mole_el.txt: el wise result of the released mole.</p></li>
+<li><p>released_mole_el.txt: element wise result of the released mole.</p></li>
 </ul>
 <div class="section" id="defining-input-inventory">
 <h2>Defining input inventory<a class="headerlink" href="#defining-input-inventory" title="Permalink to this headline">¶</a></h2>
-<p>The input inventory can be specified by modifying the input1 list. Each list input element will be string starting with the mole number followed by the element name.</p>
+<p>The input inventory can be specified by modifying the input1 list in <code class="docutils literal notranslate"><span class="pre">minichemp.py</span></code>. Each list input element should be specified as string starting with its the mole number followed by the element name.</p>
 <p>For example,</p>
 <div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">input1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2H&#39;</span><span class="p">,</span> <span class="s1">&#39;1N&#39;</span><span class="p">,</span> <span class="s1">&#39;1O&#39;</span><span class="p">]</span>
 </pre></div>
@@ -209,8 +204,8 @@
 1. Quadratic gradient descent minimising method
 2. Sequential Quadratic Programming</p>
 <p>For this, there are two switch provided named <code class="docutils literal notranslate"><span class="pre">method</span></code> and <code class="docutils literal notranslate"><span class="pre">switch</span></code>
-- The valid value for the <code class="docutils literal notranslate"><span class="pre">method</span></code> is <code class="docutils literal notranslate"><span class="pre">SLSQP``or</span> <span class="pre">``MINI</span></code> (which calculates chemical equilibrium using <cite>Quadratic gradient descent minimising method</cite>)
-- The valid value for the <code class="docutils literal notranslate"><span class="pre">switch</span></code> is <code class="docutils literal notranslate"><span class="pre">TP``or</span> <span class="pre">``TV</span></code>.</p>
+- The valid value for the <code class="docutils literal notranslate"><span class="pre">method</span></code> is <code class="docutils literal notranslate"><span class="pre">SLSQP</span></code> or <code class="docutils literal notranslate"><span class="pre">MINI</span></code> (which calculates chemical equilibrium using <cite>Quadratic gradient descent minimising method</cite>)
+- The valid value for the <code class="docutils literal notranslate"><span class="pre">switch</span></code> is <code class="docutils literal notranslate"><span class="pre">TP</span></code> or <code class="docutils literal notranslate"><span class="pre">TV</span></code>.</p>
 </div>
 <div class="section" id="trace">
 <h2>Trace<a class="headerlink" href="#trace" title="Permalink to this headline">¶</a></h2>
