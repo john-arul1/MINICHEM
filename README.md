@@ -1,14 +1,14 @@
 # MINICHEM (MINImisation of CHEMical potentials)
 
 The MINICHEM (MINImisation of CHEMical potentials) is a code to calculate
-the In-vessel source term using thermochemical equilibrium approach. The code
-calculates the equilibrium species in the reactor vessel during ULOFA. The
+the chemical equilibrium of sodium and mox fuel system using thermochemical equilibrium approach. The code
+calculates the equilibrium species in the reactor vessel after a core melt. The
 released inventory in the cover gas is expressed in terms of release fraction.
-The code is capable to calculate the equilibrium species at both (T, P) and
-(T, V) case.
+The code can calculate the equilibrium species at both constant (T, P) and
+(T, V) cases.
 Apart from source term calculations, the code can be used for the
 general purpose chemical equilibrium calculations. The
-project started under the Reactor Shielding and Data Division (RSDD) at IGCAR.
+project was started under the Reactor Shielding and Data Division (RSDD) at IGCAR and an IAEA CRP on the subject.
 
 
 ## Documentation
